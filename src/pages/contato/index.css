@@ -1,0 +1,11 @@
+.pagina-contato{
+    text-align :center;
+    background-image: url("/public/assets/img/download.png");
+    
+   
+}
+
+.iconeNerd{
+    display:  flex;
+    align-items: flex-start;
+}
