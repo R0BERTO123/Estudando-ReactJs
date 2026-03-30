@@ -31,6 +31,12 @@ export default function App() {
           <li>
             <Link to='/contato'>ir para nerds </Link>
           </li>
+          <li>
+            <Link to='/gatos'>ir para gatos</Link>
+          </li>
+          <li>
+            <Link to='/eventos'>ir para eventos</Link>
+          </li>
         </ul>
 
 
