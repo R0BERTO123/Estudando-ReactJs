@@ -37,6 +37,9 @@ export default function App() {
           <li>
             <Link to='/eventos'>ir para eventos</Link>
           </li>
+          <li>
+            <Link to={'/contador'}>ir para variavel de estado</Link>
+          </li>
         </ul>
 
 

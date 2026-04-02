@@ -14,8 +14,8 @@ export default function Eventos() {
     function Aletrou(e) {
         let novoValor = e.target.value;
 
-        if (novoValor == "Teu cu") {
-            alert("O teu Oxi")
+        if (novoValor == "oxi") {
+            alert("Oxi")
         }
         else {
             alert("ALTEROU ALTEROU para " + novoValor)

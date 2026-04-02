@@ -5,6 +5,7 @@ import App from './pages/app';
 import Contato from './pages/contato';
 import Gatos from './pages/gatos';
 import Eventos from './pages/eventos';
+import VarEstado from './pages/varEstado';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
 
@@ -19,6 +20,7 @@ export default function Navegacao() {
                 <Route path='/gatos' element={<Gatos/>} />
                 <Route path='*' element={<NaoEmcontrado/>} />
                 <Route path='/eventos' element={<Eventos/>}/>
+                <Route path='/contador' element={<VarEstado/>}/>
             </Routes>
         </BrowserRouter>
     )
