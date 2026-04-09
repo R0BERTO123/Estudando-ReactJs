@@ -28,3 +28,15 @@
         transform: scale(1);
     }
 }
+
+.entrada{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    input{
+        min-width: auto;
+        width: 50px;
+    }
+}
