@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import lerNumber from '../utils/convesao';
 
+import CalcularValorIngresso from '../service/ingresso';
+
 export default function VarEstado() {
     const [contador, setContador] = useState(0);
     const [tituloS2, setTituloS2] = useState("Oi")
@@ -15,11 +17,15 @@ export default function VarEstado() {
     const [num2S, setNum2S] = useState(0)
     const [resS, setResS] = useState(0)
 
-    const [num1D,setNum1D]=useState(0)
-    const [num2D,setNum2D]=useState(0)
-    const [resD,setResD]=useState(0)
+    const [num1D, setNum1D] = useState(0)
+    const [num2D, setNum2D] = useState(0)
+    const [resD, setResD] = useState(0)
 
-    
+    const [quantidade, setQuantidade] = useState(0)
+    const [meia, setMeia] = useState(false)
+    const [cupom, setCupom] = useState(0)
+    const [totalIngresso, setTotalIngresso] = useState(0)
+
 
 
 
@@ -82,12 +88,16 @@ export default function VarEstado() {
         setResS(soma)
     }
 
-    function subtrair(){
+    function subtrair() {
         let divide = lerNumber(num1D) - lerNumber(num2D)
         setResD(divide)
     }
 
 
+    function calcularIngresso() {
+        setTotalIngresso(CalcularValorIngresso())
+
+    }
 
 
 
@@ -95,6 +105,52 @@ export default function VarEstado() {
         <div className='pagina-varEstado pagina'>
             <div className='cabeçalho'>
                 <h1>Variavel de Estado</h1>
+
+            </div>
+
+
+            <div className='seçao metas'>
+                <h1>Task</h1>
+
+                <div>
+                    <input type="text"  placeholder='Digite sua tarefa'/>
+                    <button>Adicionar Tarefas</button>
+                </div>
+                <ul>
+                    <li>Respirar</li>
+                    <li>Tomar Agua</li>
+                    <li>Piscar</li>
+                </ul>
+
+            </div>
+
+            <div className='seçao ingresso'>
+                <h1>venda de ingresso</h1>
+                <div className='entrada'>
+                    <div>
+                        <label htmlFor="">Quantidade :</label>
+                        <input type="text" value={quantidade} onChange={e => setQuantidade(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="">Meia entrada:</label>
+                        <input type="checkbox" value={meia} onChange={e => setMeia(e.target.checked)} />
+                    </div>
+                    <div>
+                        <label htmlFor="">Cupom:</label>
+                        <input type="text" value={cupom} onChange={e => setCupom(e.target.value)} />
+                    </div>
+
+                    <div>
+                        <button onClick={calcularIngresso}>Calcular</button>
+                    </div>
+
+                    <hr />
+                    <div>
+                        O total é R$ {totalIngresso}
+                    </div>
+
+
+                </div>
 
             </div>
 
@@ -140,6 +196,7 @@ export default function VarEstado() {
             </div>
 
             <div className='seçao'>
+
                 <h1>Calculadora</h1>
                 <div className='entrada'>
                     <input type="text" value={num1S} onChange={e => setNum1S(e.target.value)} />
@@ -151,16 +208,17 @@ export default function VarEstado() {
                 </div>
 
                 <div className='entrada'>
-                    <input type="text" value={num1D} onChange={e=> setNum1D(e.target.value)} />
+                    <input type="text" value={num1D} onChange={e => setNum1D(e.target.value)} />
                     <div>-</div>
-                    <input type="text"value={num2D} onChange={e=> setNum2D(e.target.value)} />
+                    <input type="text" value={num2D} onChange={e => setNum2D(e.target.value)} />
                     <div>=</div>
                     <div>{resD}</div>
                     <button onClick={subtrair}>Subtrair</button>
                 </div>
 
-                
+
             </div>
+
 
 
         </div>

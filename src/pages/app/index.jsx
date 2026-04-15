@@ -40,6 +40,9 @@ export default function App() {
           <li>
             <Link to={'/contador'}>ir para variavel de estado</Link>
           </li>
+          <li>
+            <Link to={"/task"}>ir para Task</Link>
+          </li>
         </ul>
 
 

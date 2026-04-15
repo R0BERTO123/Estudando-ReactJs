@@ -6,6 +6,7 @@ import Contato from './pages/contato';
 import Gatos from './pages/gatos';
 import Eventos from './pages/eventos';
 import VarEstado from './pages/varEstado';
+import Task from './pages/task';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
 
@@ -21,6 +22,7 @@ export default function Navegacao() {
                 <Route path='*' element={<NaoEmcontrado/>} />
                 <Route path='/eventos' element={<Eventos/>}/>
                 <Route path='/contador' element={<VarEstado/>}/>
+                <Route path='/task' element={<Task/>}/>
             </Routes>
         </BrowserRouter>
     )
