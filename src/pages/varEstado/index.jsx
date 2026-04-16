@@ -38,7 +38,7 @@ export default function VarEstado() {
     const [corIdentificaçao, setCorIdentificaçao] = useState("")
     const [listaPlanos, setListaPlanos] = useState([])
 
-    const[editandoPlanos,setEditandoPlanos]=useState(-1)
+    const [editandoPlanos, setEditandoPlanos] = useState(-1)
 
 
 
@@ -149,28 +149,47 @@ export default function VarEstado() {
         setEditando(pos)
     }
 
-    function adicionarPlanos() {
+    function adicionarPlanos(pos) {
 
-        if(editandoPlanos === -1){
-        let novoPlano = {
-            plano: meuPlano,
-            situaçao: situaçao,
-            cor: corIdentificaçao
+         if(meuPlano!=="" && situaçao !=='' && corIdentificaçao!==""){
+
+        if (editandoPlanos === -1) {
+
+            let novoPlano = {
+                plano: meuPlano,
+                situaçao: situaçao,
+                cor: corIdentificaçao
+            }
+            setListaPlanos([...listaPlanos, novoPlano])
+
+            setMeuPlano("")
+            setSituaçao("")
+            setCorIdentificaçao("")
         }
-        setListaPlanos([...listaPlanos, novoPlano])
-
-        setMeuPlano("")
-        setSituaçao("")
-        setCorIdentificaçao("")
-        }
-
-        //else{
-
-       // }
-
-       
-
         
+
+
+
+        else {
+            let novosPlanos = [...listaPlanos]
+
+            novosPlanos[editandoPlanos] = {
+                plano: meuPlano,
+                situaçao: situaçao,
+                cor: corIdentificaçao
+            }
+
+            setListaPlanos(novosPlanos)
+            setEditandoPlanos(-1)
+
+            setMeuPlano("")
+            setSituaçao("")
+            setCorIdentificaçao("")
+        }
+    }
+
+
+
 
 
     }
@@ -182,10 +201,13 @@ export default function VarEstado() {
 
     }
 
-   // function editarPlano(pos){
-        
+    function editarPlano(pos) {
+        setMeuPlano(listaPlanos[pos].plano)
+        setSituaçao(listaPlanos[pos].situaçao)
+        setCorIdentificaçao(listaPlanos[pos].cor)
+        setEditandoPlanos(pos)
 
-    //}
+    }
 
 
     return (
@@ -217,7 +239,7 @@ export default function VarEstado() {
 
                             <div className='editarExcluir'>
                                 <div onClick={() => exluirPlano(pos)}>❌</div>
-                                <div>✍</div>
+                                <div onClick={() => editarPlano(pos)}>✍</div>
 
                             </div>
                         </div>
