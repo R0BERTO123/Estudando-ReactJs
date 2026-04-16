@@ -27,6 +27,18 @@ export default function VarEstado() {
     const [totalIngresso, setTotalIngresso] = useState(0)
 
 
+    const [novaMeta, setNovaMeta] = useState("")
+    const [listaMeta, setListaMeta] = useState([])
+
+    const [editando, setEditando] = useState(-1)
+
+
+    const [meuPlano, setMeuPlano] = useState("")
+    const [situaçao, setSituaçao] = useState("")
+    const [corIdentificaçao, setCorIdentificaçao] = useState("")
+    const [listaPlanos, setListaPlanos] = useState([])
+
+    const[editandoPlanos,setEditandoPlanos]=useState(-1)
 
 
 
@@ -100,6 +112,81 @@ export default function VarEstado() {
     }
 
 
+    function adicionarMetas() {
+        //listaMeta.push(novaMeta)
+
+        if (novaMeta !== "") {
+
+            if (editando === -1) {
+
+                setListaMeta([...listaMeta, novaMeta])
+                setNovaMeta("")
+            }
+            else {
+                listaMeta[editando] = novaMeta
+                setListaMeta([...listaMeta])
+                setNovaMeta("")
+                setEditando(-1)
+            }
+        }
+
+    }
+
+    function teclaApertada(e) {
+        if (e.key === "Enter") {
+            adicionarMetas()
+        }
+    }
+
+    function removerMetas(pos) {
+        listaMeta.splice(pos, 1)
+        alert("Você removeu o item na posiçao " + pos,)
+        setListaMeta([...listaMeta])
+    }
+
+    function editarMetas(pos) {
+        setNovaMeta(listaMeta[pos])
+        setEditando(pos)
+    }
+
+    function adicionarPlanos() {
+
+        if(editandoPlanos === -1){
+        let novoPlano = {
+            plano: meuPlano,
+            situaçao: situaçao,
+            cor: corIdentificaçao
+        }
+        setListaPlanos([...listaPlanos, novoPlano])
+
+        setMeuPlano("")
+        setSituaçao("")
+        setCorIdentificaçao("")
+        }
+
+        //else{
+
+       // }
+
+       
+
+        
+
+
+    }
+
+    function exluirPlano(pos) {
+        listaPlanos.splice(pos, 1)
+        alert("Você excluiu o item na posiçao " + pos)
+        setListaPlanos([...listaPlanos])
+
+    }
+
+   // function editarPlano(pos){
+        
+
+    //}
+
 
     return (
         <div className='pagina-varEstado pagina'>
@@ -108,18 +195,62 @@ export default function VarEstado() {
 
             </div>
 
+            <div className='seçao planos'>
+                <h1>Meus planos atuais</h1>
+
+                <div className='entrada'>
+                    <input type="text" placeholder='Meu plano aqui' value={meuPlano} onChange={e => setMeuPlano(e.target.value)} />
+                    <input type="text" placeholder='Situaçao do plano aqui' value={situaçao} onChange={e => setSituaçao(e.target.value)} />
+                    <input type="text" placeholder='Cor de indentificaçao' value={corIdentificaçao} onChange={e => setCorIdentificaçao(e.target.value)} />
+                    <button onClick={adicionarPlanos}>Adicionar Plano</button>
+                </div>
+
+                <div className="lista">
+
+                    {listaPlanos.map((item, pos) =>
+
+                        <div className='planta' key={pos}>
+
+                            <div className='cor' style={{ backgroundColor: item.cor }}>&nbsp;</div>
+                            <h1>{item.plano} </h1>
+                            <h2>{item.situaçao}</h2>
+
+                            <div className='editarExcluir'>
+                                <div onClick={() => exluirPlano(pos)}>❌</div>
+                                <div>✍</div>
+
+                            </div>
+                        </div>
+
+                    )}
+
+
+                </div>
+
+            </div>
+
 
             <div className='seçao metas'>
-                <h1>Task</h1>
+                <h1>Metas para fazer</h1>
 
                 <div>
-                    <input type="text"  placeholder='Digite sua tarefa'/>
-                    <button>Adicionar Tarefas</button>
+                    <input type="text" placeholder='Digite suas metas' onKeyUp={teclaApertada} value={novaMeta} onChange={e => setNovaMeta(e.target.value)} />
+                    <button onClick={adicionarMetas} onKeyUp={teclaApertada}>Adicionar Metas</button>
                 </div>
+
                 <ul>
-                    <li>Respirar</li>
-                    <li>Tomar Agua</li>
-                    <li>Piscar</li>
+                    {listaMeta.map((item, pos) =>
+                        <li key={pos}>
+
+                            {item}
+                            &nbsp;
+                            <i onClick={() => removerMetas(pos)}>❌</i>
+                            &nbsp;
+                            <i onClick={() => editarMetas(pos)}>✍</i>
+
+
+                        </li>
+                    )}
                 </ul>
 
             </div>

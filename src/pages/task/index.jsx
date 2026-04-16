@@ -6,7 +6,7 @@ export default function Task() {
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    const dados = JSON.parse(localStorage.getItem("tarefas"));
+    const dados = JSON.parse(localStorage.getItem("tarrefas"));
     if (dados) setTarefas(dados);
   }, []);
 
