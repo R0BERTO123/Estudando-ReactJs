@@ -1,5 +1,6 @@
 
 import './index.scss';
+import Cabeçalho from '../../components/cabeçalho';
 
 import { Link } from 'react-router-dom';
 
@@ -7,9 +8,7 @@ export default function App() {
   return (
     <div className="App pagina">
 
-      <div className='titulo-app cabeçalho'>
-        <h1>Minha Pagina Top!</h1>
-      </div>
+     <Cabeçalho titulo="Estudando React!!!!!"/>
 
       <div className='caixa seçao'>
         <h2>Estudando React</h2>
@@ -42,6 +41,9 @@ export default function App() {
           </li>
           <li>
             <Link to={"/task"}>ir para Task</Link>
+          </li>
+          <li>
+            <Link to={"/component"}>ir para components</Link>
           </li>
         </ul>
 

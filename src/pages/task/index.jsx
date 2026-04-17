@@ -1,6 +1,7 @@
 import "./index.scss"
 import { useState, useEffect } from "react";
 
+import Cabeçalho from "../../components/cabeçalho";
 export default function Task() {
   const [tarefas, setTarefas] = useState([]);
   const [input, setInput] = useState("");
@@ -41,10 +42,12 @@ export default function Task() {
 
   return (
     <div className="Task-Maneger">
-
+      <Cabeçalho
+      titulo="Task Manager"
+      />
       <div className="TaskAdd">
 
-        <h1>Task Manager</h1>
+        
 
         <input value={input}onChange={e => setInput(e.target.value)}/>
         <button onClick={adicionar}>Adicionar</button>

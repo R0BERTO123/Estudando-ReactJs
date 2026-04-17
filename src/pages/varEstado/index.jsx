@@ -4,6 +4,7 @@ import confetti from 'canvas-confetti';
 import lerNumber from '../utils/convesao';
 
 import CalcularValorIngresso from '../service/ingresso';
+import Cabeçalho from '../../components/cabeçalho';
 
 export default function VarEstado() {
     const [contador, setContador] = useState(0);
@@ -107,7 +108,7 @@ export default function VarEstado() {
 
 
     function calcularIngresso() {
-        setTotalIngresso(CalcularValorIngresso())
+        setTotalIngresso(CalcularValorIngresso(quantidade,meia,cupom))
 
     }
 
@@ -212,11 +213,9 @@ export default function VarEstado() {
 
     return (
         <div className='pagina-varEstado pagina'>
-            <div className='cabeçalho'>
-                <h1>Variavel de Estado</h1>
-
-            </div>
-
+           <Cabeçalho
+           titulo="Variaves de estado"
+           />
             <div className='seçao planos'>
                 <h1>Meus planos atuais</h1>
 

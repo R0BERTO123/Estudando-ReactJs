@@ -1,5 +1,5 @@
 import './index.scss'
-
+import Cabeçalho from '../../components/cabeçalho';
 export default function Eventos() {
 
 
@@ -31,10 +31,9 @@ export default function Eventos() {
     return (
         <div className='pagina-eventos pagina'>
 
-            <div className='cabeçalho'>
-                <h1 onMouseMove={Moveu} >ReactJs | Eventos</h1>
-
-            </div>
+            <Cabeçalho 
+            titulo="Eventos"
+            />
 
             <div className='seçao'>
 

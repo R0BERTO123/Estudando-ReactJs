@@ -7,6 +7,7 @@ import Gatos from './pages/gatos';
 import Eventos from './pages/eventos';
 import VarEstado from './pages/varEstado';
 import Task from './pages/task';
+import Component from './pages/comp';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
 
@@ -23,6 +24,7 @@ export default function Navegacao() {
                 <Route path='/eventos' element={<Eventos/>}/>
                 <Route path='/contador' element={<VarEstado/>}/>
                 <Route path='/task' element={<Task/>}/>
+                <Route path='/component' element={<Component/>}/>
             </Routes>
         </BrowserRouter>
     )
