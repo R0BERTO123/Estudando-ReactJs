@@ -20,7 +20,7 @@ export default function Contador(p){
         <div className="comp-contador">
 
            
-            <div className="cont">
+            <div className="cont seçao">
             <h1>{p.titulo??"contador"}</h1>
                 <button onClick={mais}>+</button>
                 {numero}

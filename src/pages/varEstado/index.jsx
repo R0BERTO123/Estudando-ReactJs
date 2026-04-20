@@ -108,7 +108,7 @@ export default function VarEstado() {
 
 
     function calcularIngresso() {
-        setTotalIngresso(CalcularValorIngresso(quantidade,meia,cupom))
+        setTotalIngresso(CalcularValorIngresso(quantidade, meia, cupom))
 
     }
 
@@ -152,42 +152,42 @@ export default function VarEstado() {
 
     function adicionarPlanos(pos) {
 
-         if(meuPlano!=="" && situaçao !=='' && corIdentificaçao!==""){
+        if (meuPlano !== "" && situaçao !== '' && corIdentificaçao !== "") {
 
-        if (editandoPlanos === -1) {
+            if (editandoPlanos === -1) {
 
-            let novoPlano = {
-                plano: meuPlano,
-                situaçao: situaçao,
-                cor: corIdentificaçao
-            }
-            setListaPlanos([...listaPlanos, novoPlano])
+                let novoPlano = {
+                    plano: meuPlano,
+                    situaçao: situaçao,
+                    cor: corIdentificaçao
+                }
+                setListaPlanos([...listaPlanos, novoPlano])
 
-            setMeuPlano("")
-            setSituaçao("")
-            setCorIdentificaçao("")
-        }
-        
-
-
-
-        else {
-            let novosPlanos = [...listaPlanos]
-
-            novosPlanos[editandoPlanos] = {
-                plano: meuPlano,
-                situaçao: situaçao,
-                cor: corIdentificaçao
+                setMeuPlano("")
+                setSituaçao("")
+                setCorIdentificaçao("")
             }
 
-            setListaPlanos(novosPlanos)
-            setEditandoPlanos(-1)
 
-            setMeuPlano("")
-            setSituaçao("")
-            setCorIdentificaçao("")
+
+
+            else {
+                let novosPlanos = [...listaPlanos]
+
+                novosPlanos[editandoPlanos] = {
+                    plano: meuPlano,
+                    situaçao: situaçao,
+                    cor: corIdentificaçao
+                }
+
+                setListaPlanos(novosPlanos)
+                setEditandoPlanos(-1)
+
+                setMeuPlano("")
+                setSituaçao("")
+                setCorIdentificaçao("")
+            }
         }
-    }
 
 
 
@@ -213,9 +213,9 @@ export default function VarEstado() {
 
     return (
         <div className='pagina-varEstado pagina'>
-           <Cabeçalho
-           titulo="Variaves de estado"
-           />
+            <Cabeçalho
+                titulo="Variaves de estado"
+            />
             <div className='seçao planos'>
                 <h1>Meus planos atuais</h1>
 

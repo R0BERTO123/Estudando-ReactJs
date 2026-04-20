@@ -1,0 +1,64 @@
+.planos {
+  
+
+    .entrada{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+         
+        input{
+            width: 200px;
+        }
+
+
+
+
+    }
+}
+
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+
+    
+}
+
+.planta{
+
+    display:  flex ;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px 2px;
+    border-radius:20px ;
+
+    .editarExcluir{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    
+}
+
+.cor{
+    border-radius:100px ;
+    width: 50px;
+    height: 40px;
+    background-color: yellow;
+   
+
+        h1{
+            font: 500 20px/30px;
+        }
+
+     }
+
