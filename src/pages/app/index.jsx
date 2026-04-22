@@ -46,7 +46,10 @@ export default function App() {
             <Link to={"/component"}>ir para components</Link>
           </li>
           <li>
-            <Link to={"catalogo"}>Ir para catalogo de filmes</Link>
+            <Link to={"/catalogo"}>Ir para catalogo de filmes</Link>
+          </li>
+          <li>
+          <Link to={"/renderizaçao"}>Ir para renderizaçao</Link>
           </li>
         </ul>
 

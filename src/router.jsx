@@ -9,6 +9,7 @@ import VarEstado from './pages/varEstado';
 import Task from './pages/task';
 import Component from './pages/comp';
 import CatalogoDeFilmes from './pages/catalogoDeFilmes';
+import Renderizaçao from './pages/renderizaçao';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
 
@@ -27,6 +28,7 @@ export default function Navegacao() {
                 <Route path='/task' element={<Task/>}/>
                 <Route path='/component' element={<Component/>}/>
                 <Route path='/catalogo' element={<CatalogoDeFilmes/>}/>
+                <Route path='/renderizaçao' element={<Renderizaçao/>}/>
             </Routes>
         </BrowserRouter>
     )
