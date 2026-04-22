@@ -8,6 +8,7 @@ import Eventos from './pages/eventos';
 import VarEstado from './pages/varEstado';
 import Task from './pages/task';
 import Component from './pages/comp';
+import CatalogoDeFilmes from './pages/catalogoDeFilmes';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
 
@@ -25,6 +26,7 @@ export default function Navegacao() {
                 <Route path='/contador' element={<VarEstado/>}/>
                 <Route path='/task' element={<Task/>}/>
                 <Route path='/component' element={<Component/>}/>
+                <Route path='/catalogo' element={<CatalogoDeFilmes/>}/>
             </Routes>
         </BrowserRouter>
     )

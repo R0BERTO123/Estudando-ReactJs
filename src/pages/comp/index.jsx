@@ -135,7 +135,7 @@ export default function Component() {
                 <Contador
                 titulo="contador2"
                 inicio = {0}
-                fim ={15}
+                fim ={100}
                 />
             </div>
 
