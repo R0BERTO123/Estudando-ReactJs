@@ -16,7 +16,7 @@ export default function Renderizaçao() {
                 titulo="Renderização"
             />
             <div className="biscoito seçao">
-                <h1>Biscoito da sorte</h1>
+                <h1>Biscoito da sorte</h1>               
                 <button onClick={abrirBiscoito}>{exibirBiscoito === true ? "Fechar" :"Abrir"}</button>
 
                 {exibirBiscoito===true &&
@@ -26,7 +26,7 @@ export default function Renderizaçao() {
                 </p>
 
                 </div>
-}
+                }
             </div>
 
 

@@ -27,8 +27,22 @@ export default function CartaoFilme(p){
         
         <div className="comp-cartaoFilme">
             <img src={p.item.url} alt="" />
+
+            {p.item.estreia !==""&&
+            <div className="exibirInfo">
+                <p>{p.item.destaque === true && "⭐"}Estreia {p.item.estreia}</p>
+            </div>
+            }
+            
+
             <p>{p.item.nome}</p>
             <div className={"classsificaçao "+c()}> {p.item.classificaçao} </div>
+
+         {p.exibirInfo === true}
+            
+
+            
+            
         </div>
     )
 }
