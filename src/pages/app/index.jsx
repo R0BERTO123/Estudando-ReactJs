@@ -51,6 +51,9 @@ export default function App() {
           <li>
           <Link to={"/renderizaçao"}>Ir para renderizaçao</Link>
           </li>
+          <li>
+            <Link to={"/efeitos"}>Ir para efeito</Link>
+          </li>
         </ul>
 
 

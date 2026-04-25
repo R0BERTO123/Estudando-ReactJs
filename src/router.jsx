@@ -12,6 +12,7 @@ import CatalogoDeFilmes from './pages/catalogoDeFilmes';
 import Renderizaçao from './pages/renderizaçao';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
+import Efeitos from './pages/efeitos';
 
 
 export default function Navegacao() {
@@ -29,6 +30,7 @@ export default function Navegacao() {
                 <Route path='/component' element={<Component/>}/>
                 <Route path='/catalogo' element={<CatalogoDeFilmes/>}/>
                 <Route path='/renderizaçao' element={<Renderizaçao/>}/>
+                <Route path='/efeitos' element={<Efeitos/>}/>
             </Routes>
         </BrowserRouter>
     )

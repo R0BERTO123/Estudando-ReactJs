@@ -1,0 +1,14 @@
+.page-efeito{
+
+    .sit-aluno{
+        display:  flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        input{
+            min-width:  auto;
+            width: 80px;
+            text-align: center;
+        }
+    }
+}
