@@ -13,6 +13,7 @@ import Renderizaçao from './pages/renderizaçao';
 
 import NaoEmcontrado from './pages/naoEmcontrado';
 import Efeitos from './pages/efeitos';
+import Flo from './pages/flo/banner';
 
 
 export default function Navegacao() {
@@ -31,6 +32,7 @@ export default function Navegacao() {
                 <Route path='/catalogo' element={<CatalogoDeFilmes/>}/>
                 <Route path='/renderizaçao' element={<Renderizaçao/>}/>
                 <Route path='/efeitos' element={<Efeitos/>}/>
+                <Route path='/flo' element={<Flo/>}/>
             </Routes>
         </BrowserRouter>
     )

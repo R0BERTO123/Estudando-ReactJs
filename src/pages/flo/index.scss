@@ -1,0 +1,115 @@
+.page-flor{
+   
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  
+  
+  body {
+    background: #f7f7f7;
+  }
+  
+  .app {
+    max-width: 420px;
+    margin: auto;
+    background: #fff;
+    min-height: 100vh;
+  }
+  
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  /* BANNER */
+  .banner {
+    background: linear-gradient(180deg, #f8d7da, #f06277);
+    padding: 40px 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-align: center;
+  }
+  
+  .banner h1 {
+    font-size: 22px;
+  }
+  
+  /* CARDS */
+  .cards {
+    padding: 20px;
+  }
+  
+  .card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+  
+  .card {
+    min-width: 140px;
+    height: 160px;
+    border-radius: 16px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .blue {
+    background: linear-gradient(180deg, #2f6df6, #0d1b3d);
+    color: white;
+  }
+  
+  .light {
+    background: #dfe4ea;
+  }
+  
+  .purple {
+    background: #b39ddb;
+  }
+  
+  .dark {
+    background: #1f2a44;
+    color: white;
+  }
+  
+  .tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+  
+  /* RECOMMEND */
+  .recommend {
+    padding: 20px;
+  }
+  
+  .recommend-list {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .rec-card {
+    width: 120px;
+  }
+  
+  .img {
+    height: 80px;
+    background: #ccc;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+}

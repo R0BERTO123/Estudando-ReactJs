@@ -54,6 +54,9 @@ export default function App() {
           <li>
             <Link to={"/efeitos"}>Ir para efeito</Link>
           </li>
+          <li>
+            <Link to={"/flo"}>Ir para flo</Link>
+          </li>
         </ul>
 
 

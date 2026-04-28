@@ -11,4 +11,33 @@
             text-align: center;
         }
     }
+
+    .notas-aluno{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input{
+            min-width: auto;
+            width: 80px;
+        }
+
+        .entradas{
+            display: flex;
+            gap: 20px;
+        }
+
+        .media .media-situaçao{
+            display: flex;
+           
+           padding: 20px;
+
+       
+
+            div{
+                font: 600 23px;
+            }
+        }
+      
+    }
 }
