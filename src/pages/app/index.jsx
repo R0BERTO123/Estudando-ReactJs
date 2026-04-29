@@ -57,6 +57,9 @@ export default function App() {
           <li>
             <Link to={"/flo"}>Ir para flo</Link>
           </li>
+          <li>
+            <Link to={"/API"}>Ir para API</Link>
+          </li>
         </ul>
 
 

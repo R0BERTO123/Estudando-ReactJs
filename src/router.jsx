@@ -14,6 +14,7 @@ import Renderizaçao from './pages/renderizaçao';
 import NaoEmcontrado from './pages/naoEmcontrado';
 import Efeitos from './pages/efeitos';
 import Flo from './pages/flo/banner';
+import ChamadaAPI from './pages/chamadaAPI';
 
 
 export default function Navegacao() {
@@ -33,6 +34,7 @@ export default function Navegacao() {
                 <Route path='/renderizaçao' element={<Renderizaçao/>}/>
                 <Route path='/efeitos' element={<Efeitos/>}/>
                 <Route path='/flo' element={<Flo/>}/>
+                <Route path='/API' element={<ChamadaAPI/>}/>
             </Routes>
         </BrowserRouter>
     )
